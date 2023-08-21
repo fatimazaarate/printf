@@ -30,7 +30,8 @@ int _printf(const char *format, ...)
 		num_printed = f_specifier(args, *format);
 		if (num_printed == 0)
 		{
-			write(1, format - 1, 1);
+			format--;
+			print_char(*format);
 			num_printed = 1;
 		}
 		count += num_printed;
