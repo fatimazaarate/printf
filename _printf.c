@@ -16,7 +16,7 @@ int _printf(const char *format, ...)
 
 	if (format == NULL)
 	{
-		format = "";
+		va_end(args);
 		return (-1);
 	}
 
@@ -34,8 +34,8 @@ int _printf(const char *format, ...)
 		if (num_printed == 0)
 		{
 			format--;
-			print_char(*format);
-			num_printed++;
+			print_char('%');
+			num_printed  = 1;
 		}
 		count += num_printed;
 	}
@@ -43,7 +43,9 @@ int _printf(const char *format, ...)
 	{
 		count += print_char(*format);
 	}
+
 	format++;
+	
 	}
 
 	va_end(args);
