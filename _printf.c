@@ -9,7 +9,7 @@
 int _printf(const char *format, ...)
 {
 	va_list args;
-	int index = 0;
+	int count = 0;
 	int r;
 
 	va_start(args, format);
@@ -28,16 +28,17 @@ int _printf(const char *format, ...)
 			break;
 
 		r = f_specifier(args, *format);
-		index += r;
+		count += r;
 	}
 	else
 	{
+		format--;
 		write(1, format, 1);
-		index++;
+		count++;
 	}
 	format++;
 	}
 
 	va_end(args);
-	return (index);
+	return (count);
 }

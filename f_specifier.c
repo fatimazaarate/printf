@@ -14,6 +14,3 @@ int f_specifier(va_list args, char spec)
 			return (0);
 	}
 }
-
-
-			
