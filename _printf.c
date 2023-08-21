@@ -1,4 +1,4 @@
-#include " main.h"
+#include "main.h"
 
 /**
 * _printf - create our own printf function
@@ -11,7 +11,6 @@ int _printf(const char *format, ...)
 	va_list args;
 	int index = 0;
 	char c;
-	int d, leng;
 	char *str;
 
 	va_start(args, format);
@@ -37,13 +36,6 @@ int _printf(const char *format, ...)
 		else if (*format == 's')
 		{
 			str = va_arg(args, char *);
-			write(1, str, strlen(str));
-			index += strlen(str);
-		}
-		else if (*format == 'd' || *format == 'i')
-		{
-			d = va_arg(args, int);
-			sprintf(str, "%d", d);
 			write(1, str, strlen(str));
 			index += strlen(str);
 		}
