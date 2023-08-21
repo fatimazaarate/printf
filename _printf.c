@@ -24,10 +24,7 @@ int _printf(const char *format, ...)
 		{
 			format++;
 
-		if (*format == '\0')
-			break;
-
-		else if (*format == 'c')
+		if (*format == 'c')
 		{
 			c = va_arg(args, int);
 			write(1, &c, 1);
