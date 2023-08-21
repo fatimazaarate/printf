@@ -1,4 +1,10 @@
-#include "main.h"
+#include " main.h" 
+/**
+* _printf - create our own printf function
+* @format: a character string
+* 
+* Return: the number of characters printed
+*/
 int _printf(const char *format, ...)
 {
         va_list args;
@@ -53,7 +59,7 @@ int _printf(const char *format, ...)
                 }
                 format++;
         }
-
+        
         va_end(args);
         return (index);
 }
