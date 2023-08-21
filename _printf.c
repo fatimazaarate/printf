@@ -10,7 +10,7 @@ int _printf(const char *format, ...)
 {
 	va_list args;
 	int count = 0;
-	int r;
+	int num_printed;
 
 	va_start(args, format);
 
@@ -27,14 +27,17 @@ int _printf(const char *format, ...)
 		if (*format == '\0')
 			break;
 
-		r = f_specifier(args, *format);
-		count += r;
+		num_printed = f_specifier(args, *format);
+		if (num_printed == 0)
+		{
+			write(1, format - 1, 1);
+			num_printed = 1;
+		}
+		count += num_printed;
 	}
 	else
 	{
-		format--;
-		write(1, format, 1);
-		count++;
+		count += print_char(*format);
 	}
 	format++;
 	}
