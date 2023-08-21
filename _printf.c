@@ -33,6 +33,8 @@ int _printf(const char *format, ...)
 		else if (*format == 's')
 		{
 			str = va_arg(args, char *);
+			if (str == NULL)
+				str = "";
 			write(1, str, strlen(str));
 			index += strlen(str);
 		}
