@@ -32,7 +32,7 @@ int _printf(const char *format, ...)
 		{
 			format--;
 			print_char(*format);
-			num_printed = 1;
+			num_printed++;
 		}
 		count += num_printed;
 	}
