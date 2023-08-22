@@ -13,5 +13,6 @@ int print_char(char c);
 int print_str(char *str);
 int print_int(int number);
 int print_unsigned(int num);
+int print_hexa(int num);
 
 #endif
