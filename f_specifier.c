@@ -10,8 +10,6 @@ int f_specifier(va_list args, char spec)
 			return (print_str(va_arg(args, char *)));
 		case '%': 
 			return (print_char('%'));
-		/*case 'd':
-			return (print_int(va_arg(args, int)));*/
 		default:
 			return (0);
 	}

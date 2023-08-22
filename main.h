@@ -11,6 +11,6 @@ int _printf(const char *format, ...);
 int f_specifier(va_list args, char spec);
 int print_char(char c);
 int print_str(char *str);
-int print_int(int num);
+/*int print_int(int num);*/
 
 #endif
