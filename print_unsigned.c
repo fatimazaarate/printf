@@ -3,7 +3,7 @@
 #include <string.h>
 
 /**
-* print_unsigned - convert signed to unsigned then to characters
+* print_uns - convert signed to unsigned then to characters
 * @num: number to procees
 *
 * Return: number of chars
