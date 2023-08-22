@@ -3,14 +3,37 @@
 
 int print_str(char *str)
 {
-	int length;
+	int length = 0;
 
 	if (str == NULL)
 		str = "";
 
-	length = strlen(str);
+while (*str)
+{
+	if (*str == '\\')
+	{
+		str++;
 
-	write(1, str, length);
+		if (*str == 'n')
+		{
+			write(1, "\n", 1);
+			str++;
+			length++;
+		}
+		else if (*str == 't')
+		{
+			write(1, "\t", 1);
+			str++;
+			length++;
+		}
+	}
+		else
+		{
 
+		write(1, str, 1);
+		str++;
+		length++;
+		}
+}
 	return (length);
 }
