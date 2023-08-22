@@ -1,5 +1,12 @@
 #include <stdio.h>
 
+/**
+* print_hexa - convert int to hexa
+* @number: integer to convert
+*
+* Return: number of char
+*/
+
 int print_hexa(int number)
 {
 	int i = 0, remainder, j = 0, length;
