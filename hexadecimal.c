@@ -13,7 +13,7 @@ int print_hexa(int number)
 	char tmp;
 	char hex[30];
 
-	while(number > 0)
+	while (number > 0)
 	{
 		remainder = number % 16;
 
@@ -21,7 +21,7 @@ int print_hexa(int number)
 		{
 			hex[i] = '0' + remainder;
 		}
-		else 
+		else
 		{
 			hex[i] = 'a' + (remainder - 10);
 		}
@@ -41,5 +41,5 @@ int print_hexa(int number)
 		j++;
 	}
 
-	return length;
-}			
+	return (length);
+}

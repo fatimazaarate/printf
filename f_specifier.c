@@ -31,7 +31,7 @@ int f_specifier(va_list args, char spec)
 			return (print_int(va_arg(args, int)));
 
 		case 'u':
-			return (print_unsigned(va_arg(args, unsigned int)));
+			return (print_unsigned(va_arg(args, int)));
 
 		case 'x':
 			return (print_hexa(va_arg(args, int)));
