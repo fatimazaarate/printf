@@ -1,11 +1,5 @@
 #include "main.h"
 
-/**
-* _printf - create our own printf function
-* @format: a character string
-*
-* Return: the number of characters printed
-*/
 int _printf(const char *format, ...)
 {
 	va_list args;
@@ -16,13 +10,12 @@ int _printf(const char *format, ...)
 
 	if (format == NULL)
 	{
-		format = "";
+		va_end(args);
 		return (-1);
 	}
 
 	while (*format)
 	{
-
 	if (*format == '%')
 	{
 		format++;
@@ -35,7 +28,7 @@ int _printf(const char *format, ...)
 		{
 			format--;
 			print_char('%');
-			num_printed  = 1;
+			num_printed = 1;
 		}
 		count += num_printed;
 	}
@@ -44,10 +37,9 @@ int _printf(const char *format, ...)
 		count += print_char(*format);
 	}
 
-	format++;
-	
+	format ++;
 	}
 
 	va_end(args);
-	return (count);
+	return(count);
 }
