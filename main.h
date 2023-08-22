@@ -12,7 +12,7 @@ int f_specifier(va_list args, char spec);
 int print_char(char c);
 int print_str(char *str);
 int print_int(int number);
-int print_unsigned(int num);
+int print_uns(int num);
 int print_hexa(int num);
 
 #endif

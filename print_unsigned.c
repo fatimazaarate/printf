@@ -9,7 +9,7 @@
 * Return: number of chars
 */
 
-int print_unsigned(int num)
+int print_uns(int num)
 {
 	char s[20];
 
