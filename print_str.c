@@ -1,6 +1,13 @@
 #include <string.h>
 #include <unistd.h>
 
+/**
+* print_str - prints string and return its length
+* @str: string to be printd
+*
+* Return: number of char printed
+*/
+
 int print_str(char *str)
 {
 	int length = 0;
