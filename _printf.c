@@ -16,7 +16,7 @@ int _printf(const char *format, ...)
 
 	if (format == NULL)
 	{
-		va_end(args);
+		format = "";
 		return (-1);
 	}
 
